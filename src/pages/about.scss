@@ -1,0 +1,29 @@
+.navCols {
+  cursor: pointer;
+}
+.aboutContainer {
+  padding-top: 4em;
+  .secondCol {
+  .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      align-self: center;
+    }
+    img {
+      align-self: center;
+      width: 45rem;
+      height: 32rem;
+
+    }
+    .tabPaneText {
+      margin-top: 2rem;
+      width: 57rem;
+    }
+  }
+  }
+}
+
+

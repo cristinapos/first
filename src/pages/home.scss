@@ -1,0 +1,27 @@
+
+.cardGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 5em;
+ .cardD {
+   margin: 2em;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 0 5em;
+    border: none;
+   .divCardOne {
+     display: flex;
+     flex-direction: row;
+     .divCard {
+       border: 2px #0a380a solid;
+       display: flex;
+       flex-direction: column;
+       margin-right: 2em;
+       width: 15rem;
+
+     }
+   }
+ }
+}

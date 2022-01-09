@@ -1,0 +1,46 @@
+{
+  "blogs": [
+    {
+      "id": 2,
+      "title": "Maxim Right",
+      "body": "Some text one"
+    },
+    {
+      "id": 3,
+      "title": "My post",
+      "body": "Some text one"
+    },
+    {
+      "id": 4,
+      "title": "My post",
+      "body": "Some text one"
+    },
+    {
+      "title": "My post",
+      "body": "Hello world",
+      "id": 5
+    },
+    {
+      "title": "Aboau Java",
+      "body": "Some text",
+      "id": 6
+    }
+  ],
+  "members": [
+    {
+      "id": 1,
+      "title": "Developers",
+      "body": "Lorem ipsum dolore sit amet"
+    },
+    {
+      "id": 2,
+      "title": "Developers",
+      "body": "Lorem ipsum dolore sit ametn  dfd"
+    },
+    {
+      "id": 3,
+      "title": "Developers",
+      "body": "Lorem ipsum dolore sit amet hf"
+    }
+  ]
+}
