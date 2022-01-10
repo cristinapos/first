@@ -2,45 +2,69 @@
   "blogs": [
     {
       "id": 2,
-      "title": "Maxim Right",
-      "body": "Some text one"
+      "title": "About JavaScript",
+      "body": "JavaScript is the world's most popular programming language.\n\nJavaScript is the programming language of the Web.\n\nJavaScript is easy to learn.\n\nThis tutorial will teach you JavaScript from basic to advanced."
     },
     {
       "id": 3,
-      "title": "My post",
-      "body": "Some text one"
+      "title": "JavaScript Comments",
+      "body": "JavaScript comments can be used to explain JavaScript code, and to make it more readable.\n\nJavaScript comments can also be used to prevent execution, when testing alternative code.Single line comments start with //.\n\nAny text between // and the end of the line will be ignored by JavaScript (will not be executed).\n\nThis example uses a single-line comment before each code line:"
     },
     {
       "id": 4,
-      "title": "My post",
-      "body": "Some text one"
+      "title": "Math Object",
+      "body": "The JavaScript Math object allows you to perform mathematical tasks on numbers. Unlike other objects, the Math object has no constructor.\n\nThe Math object is static.\n\nAll methods and properties can be used without creating a Math object first."
     },
     {
-      "title": "My post",
-      "body": "Hello world",
+      "title": "Errors",
+      "body": "Throw, and Try...Catch...Finally\n\nThe try statement defines a code block to run (to try).\n\nThe catch statement defines a code block to handle any error.\n\nThe finally statement defines a code block to run regardless of the result.\n\nThe throw statement defines a custom error.",
       "id": 5
     },
     {
-      "title": "Aboau Java",
-      "body": "Some text",
+      "title": "JSON",
+      "body": "\n    JSON stands for JavaScript Object Notation\n    JSON is a lightweight data interchange format\n    JSON is language independent *\n    JSON is \"self-describing\" and easy to understand\n\n* The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language. ",
       "id": 6
+    },
+    {
+      "title": "Debugging",
+      "body": "\n\nProgramming code might contain syntax errors, or logical errors.\n\nMany of these errors are difficult to diagnose.\n\nOften, when programming code contains errors, nothing will happen. There are no error messages, and you will get no indications where to search for errors.\n\nSearching for (and fixing) errors in programming code is called code debugging.",
+      "id": 7
+    },
+    {
+      "title": "Best Practices",
+      "body": "Avoid Global Variables\n\nMinimize the use of global variables.\n\nThis includes all data types, objects, and functions.\n\nGlobal variables and functions can be overwritten by other scripts.\n\nUse local variables instead, and learn how to use closures.\nAlways Declare Local Variables\n\nAll variables used in a function should be declared as local variables.\n\nLocal variables must be declared with the var keyword or the let keyword,or the const keyword, otherwise they will become global variables.",
+      "id": 8
+    },
+    {
+      "title": "Common Mistakes",
+      "body": "",
+      "id": 9
+    },
+    {
+      "title": "Performance",
+      "body": "How to speed up your JavaScript code.\nReduce Activity in Loops\n\nLoops are often used in programming.\n\nEach statement in a loop, including the for statement, is executed for each iteration of the loop.\n\nStatements or assignments that can be placed outside the loop will make the loop run faster. ",
+      "id": 10
     }
+
   ],
   "members": [
     {
       "id": 1,
-      "title": "Developers",
-      "body": "Lorem ipsum dolore sit amet"
+      "title": "HTML",
+      "img": "https://www.pngitem.com/pimgs/m/519-5194865_html-css-js-html-5-hd-png-download.png",
+      "body": "The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.\n\nWeb browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.\n\nHTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <img /> and <input /> directly introduce content into the page. Other tags such as <p> surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page."
     },
     {
       "id": 2,
-      "title": "Developers",
-      "body": "Lorem ipsum dolore sit ametn  dfd"
+      "title": "Javascript",
+      "img": "https://miro.medium.com/max/1838/1*6ahbWjp_g9hqhaTDSJOL1Q.png",
+      "body": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area. "
     },
     {
       "id": 3,
-      "title": "Developers",
-      "body": "Lorem ipsum dolore sit amet hf"
+      "title": "React",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png",
+      "body": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality."
     }
   ]
 }

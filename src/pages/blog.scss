@@ -1,4 +1,29 @@
 .blogContainer {
   padding-top: 5em;
+  .searchAddContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    .buttonAdd {
+      color:#0dcaf0;
+      font-weight: 400;
+      &:hover {
+        color:#000;
+      }
+    }
+    .form {
+      display: flex;
+      height: 2.5em;
+    }
+  }
+  .colList{
 
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .media-body {
+      padding-bottom: 5em;
+      width: 12em;
+    }
+  }
 }

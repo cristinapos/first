@@ -1,4 +1,3 @@
-import {Button} from "react-bootstrap";
 import React from "react";
 import "./blogDetails.scss"
 import {useParams} from "react-router-dom";
@@ -16,8 +15,8 @@ const TeamDetails = () => {
                 {isLoading && <div>Loading...</div>}
                 {member && (
                     <article>
-                        <h2>{member.title}</h2>
-                        <p>{member.body}</p>
+                        <h2 className="text-primary">{member.title}</h2>
+                        <p className='text-md-start'>{member.body}</p>
                     </article>
                 )}
             </div>

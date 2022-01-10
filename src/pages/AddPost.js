@@ -1,12 +1,8 @@
-import {Button, Container, Form, FormCheck, FormControl, FormGroup, FormLabel, FormText} from "react-bootstrap";
+import {Button, Container} from "react-bootstrap";
 import React, {useEffect, useState} from "react";
 import "./addPost.scss"
 import {useNavigate} from "react-router-dom";
-//import {useHistory} from "react-router";
 
-
-
-const API = "http://localhost:3001";
 
 const AddPost = (props) =>{
     const {postId} = props;
@@ -15,9 +11,9 @@ const AddPost = (props) =>{
 
     useEffect(() => {
         if(!isNaN(postId)){
-            fetch("http://localhost:3001/blogs/" + postId).
-            then((response) => response.json()).
-            then((data) => {
+            fetch("http://localhost:3001/blogs/" + postId)
+                .then((response) => response.json())
+                .then((data) => {
                 delete data["id"];
                 console.log("From server", data);
                 setPost(data)
@@ -38,9 +34,9 @@ const AddPost = (props) =>{
             },
             body:JSON.stringify(post),
             redirect:"manual"
-        }).
-        then((resp)=>resp.json()).
-        then((data)=>{
+        })
+            .then((resp)=>resp.json())
+            .then((data)=>{
             console.log(data);
             navigate(-1);
         }).catch((err)=>{
@@ -52,33 +48,55 @@ const AddPost = (props) =>{
     return (
         <>
             <Container className="containerPost">
-                <h1 className="text-center">Add a post</h1>
-                <form onSubmit={handleSubmit} >
-                    <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Post title</label>
-                        <input type="text" className="form-control" id="titleInput"
-                               value={post.title}
-                               onChange={(event)=>{
-                                   setPost({
-                                       ...post,
-                                       title: event.target.value
-                                   })
-                               }}
-                               placeholder="Write the title"/>
+                <h1 className="text-center text-primary">Add a post</h1>
+                <div className="post">
+                    <form onSubmit={handleSubmit} >
+                        <div className="form-group">
+                            <label htmlFor="exampleInputPassword1" className="text-info label">Post title</label>
+                            <input type="text" className="form-control" id="titleInput"
+                                   value={post.title}
+                                   onChange={(event)=>{
+                                       setPost({
+                                           ...post,
+                                           title: event.target.value
+                                       })
+                                   }}
+                                   placeholder="Write the title"/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="exampleInputPassword1" className="text-info label">Context</label>
+                            <textarea className="form-control" id="bodyInput"
+                                      value={post.body}
+                                      onChange={(event)=>{
+                                          setPost({
+                                              ...post,
+                                              body: event.target.value
+                                          })
+                                      }}/>
+                        </div>
+                        <Button variant="primary" type="submit" classname="buttonAddPost">Add post</Button>
+                    </form>
+                    <div className="recomandations">
+                        <h3 className="text-info">Recomandations</h3>
+                        <p className='text-md-start'>
+                            Please create code fences by placing your code between sets of 3 backticks ` or use CTRL + K.
+                            Create inline code spans by placing text between single backticks.
+                            Add a preformatted block within a list with eight spaces
+                        </p>
+                        <p className='text-md-start'>
+                            Add > to the beginning of each line to create a blockquote.
+                            > A standard blockquote is indented.
+                            > > A nested blockquote is indented more.
+                            > > > > You can nest to any depth.
+                        </p>
+                        <p className='text-md-start'>
+                            Create bulleted and numbered lists.
+                        </p>
+                        <p className="lastP">
+                            Thank you for your post!
+                        </p>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Context</label>
-                        <textarea className="form-control" id="bodyInput"
-                                  value={post.body}
-                                  onChange={(event)=>{
-                                      setPost({
-                                          ...post,
-                                          body: event.target.value
-                                      })
-                                  }}></textarea>
-                    </div>
-                    <Button variant="primary" type="submit">Add post</Button>
-                </form>
+                </div>
             </Container>
         </>
 
@@ -86,55 +104,3 @@ const AddPost = (props) =>{
 }
 
 export default AddPost;
-
-
-
-
-// const AddPost = () => {
-//     const [title, setTitle] = useState('');
-//     const [body, setBody] = useState('');
-//     const [isLoading, setIsLoading] = useState(false);
-//     //const history = useHistory();
-//
-//    const handleSubmit = (e) => {
-//        e.preventDefault();
-//        const blog = {title, body};
-//
-//        setIsLoading(true);
-//
-//        fetch('http://localhost:3001/blogs', {
-//            method: 'post',
-//            headers: {"Content-Type": "aplication/json"},
-//            body: JSON.stringify(blog)
-//        }) .then(response => response.json())
-//            .then(() => {
-//            console.log("new blog");
-//            setIsLoading(false);
-//            //history.push()
-//        })
-//
-//
-//    }
-//
-//     return (
-//         <>
-//             <Container className="containerPost">
-//                 <h1 className="text-center">Add a post</h1>
-//                 <Form onSubmit={handleSubmit}>
-//                     <FormGroup controlId="formBasicName">
-//                         <FormLabel>Post Title</FormLabel>
-//                         <FormControl type="text" placeholder="Write the title" value={title} onChange={(event) => setTitle(event.target.value)}></FormControl>
-//                     </FormGroup>
-//                     <FormGroup controlId="formBasicPassword">
-//                         <FormLabel>Context</FormLabel>
-//                         <FormControl as='textarea' rows="3" value={body} onChange={(event) => setBody(event.target.value)}></FormControl>
-//                     </FormGroup>
-//                     {!isLoading && <Button variant="primary" type="submit">Add post</Button>}
-//                     {isLoading && <Button variant="primary" type="submit" disabled>Addind post...</Button>}
-//                 </Form>
-//             </Container>
-//         </>
-//
-//     )
-// }
-// export default AddPost;

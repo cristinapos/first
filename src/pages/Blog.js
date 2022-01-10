@@ -3,24 +3,17 @@ import {
     Container,
     Row,
     Col,
-    Modal,
-    Card,
-    ListGroup,
-    ListGroupItem,
     Button,
     Nav,
-    Form,
-    FormGroup, FormLabel, FormControl
+    Form, FormControl
 } from "react-bootstrap";
 import "./blog.scss"
-import {BrowserRouter, Link, NavLink, Route, Routes} from "react-router-dom";
-import AddPost from "./AddPost";
-import Data from "../data/db.json"
+import {Link} from "react-router-dom";
 
 function getBlogs(callback){
-    fetch('http://localhost:3001/blogs').
-    then((resp)=>resp.json()).
-    then(callback).catch((err)=>{
+    fetch('http://localhost:3001/blogs')
+        .then((resp)=>resp.json())
+        .then(callback).catch((err)=>{
         console.error("ERROR:",err.toString());
     })
 }
@@ -97,25 +90,34 @@ function Blog() {
 
     return (
         <Container className="blogContainer">
-            <Button variant="warning">
-                <Nav>
-                    <Nav.Link as={Link} to="/blog/addPost">Add post</Nav.Link>
-                </Nav>
-            </Button>
-            <Form className="form">
-                <FormControl
-                    type="text"
-                    placeholder="Search"
-                    className="me-sm-2"
-                    onChange={filter}
-                />
-                <Button variant="outline-info">Search</Button>
-            </Form>
+            <div className="searchAddContainer">
+                <div className="addPost">
+
+                        <Nav>
+                            <Nav.Link as={Link} to="/blog/addPost">
+                                <Button variant="outline-info" className="buttonAdd btn btn-md">
+                                    Add post
+                                </Button>
+                            </Nav.Link>
+                        </Nav>
+
+                </div>
+                <Form className="form">
+                    <FormControl
+                        type="text"
+                        placeholder="Search"
+                        className="me-sm-2"
+                        onChange={filter}
+                    />
+                    <Button variant="outline-info">Search</Button>
+                </Form>
+            </div>
+
             <div className="blogs">
                 {foundPost && foundPost.length > 0 ? (
                     foundPost.map((blog) => {
                         return (
-                            <div className="d-md-flex" key={blog.id}>
+                            <div className="d-md-flex blogList" key={blog.id}>
                                 <img
                                     width={150}
                                     height={150}
@@ -135,14 +137,14 @@ function Blog() {
                         )
                     })) :
                     ( <div> {blogs &&
-                    <Col md="9">
+                    <Col className="colList">
                         {blogs.map((blog) => (
                             <div className="d-md-flex" key={blog.id}>
                                 <img
                                     width={150}
                                     height={150}
                                     className="align-self-start mr-3"
-                                    src="https://images.pexels.com/photos/1095826/pexels-photo-1095826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png"
                                 />
                                 <div className="media-body">
                                     <Nav>
@@ -168,18 +170,3 @@ function Blog() {
 
 export default Blog;
 
-
-{/*<ul className="list-unstyled">*/}
-{/*    <li className="me">*/}
-{/*        <img*/}
-{/*            width={150}*/}
-{/*            height={150}*/}
-{/*            className="align-self-start mr-3"*/}
-{/*            src="https://images.pexels.com/photos/1095826/pexels-photo-1095826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"*/}
-{/*        />*/}
-{/*        <div className="media-body">*/}
-{/*            <h5 className="mt-0 mb-1">Blog post</h5>*/}
-{/*            <p>Some text</p>*/}
-{/*        </div>*/}
-{/*    </li>*/}
-{/*</ul>*/}

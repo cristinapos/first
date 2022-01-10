@@ -1,4 +1,38 @@
 .containerPost {
-
   padding-top: 5em;
+
+  h1 {
+    padding-bottom: 2rem;
+  }
+  .post {
+    display: flex;
+    justify-content: space-between;
+    form {
+      width: 30em;
+      .label {
+        margin: 1em 0;
+      }
+      textarea {
+        margin-bottom: 2em;
+        height: 15em;
+      }
+      .buttonAddPost {
+        margin-top: 2rem;
+      }
+    }
+
+
+  }
+  .recomandations {
+    width: 50%;
+    h3 {
+      margin-bottom: 1em;
+    }
+    .lastP {
+      padding-top: 2em;
+      font-size: 1em;
+      color: #7f868c;
+    }
+  }
 }
+

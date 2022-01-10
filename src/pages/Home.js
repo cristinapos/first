@@ -53,7 +53,7 @@ function Home() {
         <>
             <CarouselBar/>
             <Container className="homeContainer">
-                <h2 className='text-center m-4'>Our team</h2>
+                <h2 className='text-center m-4'>General presentation</h2>
                 <Container className="m-md-2 cardGroup">
                     {error && <div>{error}</div>}
                     {isLoading && <div>Loading...</div>}
@@ -62,51 +62,21 @@ function Home() {
                         <div className="divCardOne">
                             {members.map((member) => (
                                 <div className="divCard">
-                                    <Card.Img variant="top" className="imagCard" src="https://images.pexels.com/photos/1679618/pexels-photo-1679618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
-                                    <Card.Body>
-                                        <Card.Title>{member.title}</Card.Title>
+                                    <Card.Img variant="top" src={member.img} height={150}/>
+                                    <div className="cardBody">
+                                        <Card.Title className="text-primary">{member.title}</Card.Title>
                                         <Card.Text>More details</Card.Text>
                                         <Nav>
                                             <Nav.Link as={Link} to={`/${member.id}`}>
-                                                <Button variant="primary">Read more</Button>
+                                                <Button variant="primary" classname="align-self-md-center cardButton">Read more</Button>
                                             </Nav.Link>
                                         </Nav>
-                                    </Card.Body>
+                                    </div>
                                 </div>
 
                             ))}
                         </div>}
                     </div>
-                    {/*// <Card className="card cardOne">*/}
-                    {/*//     <Card.Img variant="top" src="https://images.pexels.com/photos/1679618/pexels-photo-1679618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>*/}
-                    {/*//     <Card.Body>*/}
-                    {/*//         <Card.Title>Developers</Card.Title>*/}
-                    {/*//         <Card.Text>*/}
-                    {/*//             Lorem ipsum dolor sit amet*/}
-                    {/*//         </Card.Text>*/}
-                    {/*//         <Button variant="primary">About team</Button>*/}
-                    {/*//     </Card.Body>*/}
-                    {/*// </Card>*/}
-                    {/*// <Card className="card cardTwo">*/}
-                    {/*//     <Card.Img variant="top" src="https://images.pexels.com/photos/1679618/pexels-photo-1679618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>*/}
-                    {/*//     <Card.Body>*/}
-                    {/*//         <Card.Title>Developers</Card.Title>*/}
-                    {/*//         <Card.Text>*/}
-                    {/*//             Lorem ipsum dolor sit amet*/}
-                    {/*//         </Card.Text>*/}
-                    {/*//         <Button variant="primary">About team</Button>*/}
-                    {/*//     </Card.Body>*/}
-                    {/*// </Card>*/}
-                    {/*// <Card className="card cardThree">*/}
-                    {/*//     <Card.Img variant="top" src="https://images.pexels.com/photos/1679618/pexels-photo-1679618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>*/}
-                    {/*//     <Card.Body>*/}
-                    {/*//         <Card.Title>Developers</Card.Title>*/}
-                    {/*//         <Card.Text>*/}
-                    {/*//             Lorem ipsum dolor sit amet*/}
-                    {/*//         </Card.Text>*/}
-                    {/*//         <Button variant="primary">About team</Button>*/}
-                    {/*//     </Card.Body>*/}
-                    {/*// </Card>*/}
                 </Container>
             </Container>
         </>

@@ -1,9 +1,5 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import forestOne from '../assets/forestOne.jpg';
-import forestTwo from '../assets/forestTwo.jpg';
-import forestThree from '../assets/pexels-photo-7364559.jpeg';
-import forestFour from '../assets/pexels-photo-4099158.jpeg'
 import "./carouselbar.scss"
 
 export default function CarouselBar () {
@@ -13,41 +9,31 @@ export default function CarouselBar () {
             <Carousel.Item>
                 <img
                 className="d-block w-100 imageCarousel"
-                src={forestOne}
+                src="https://images.pexels.com/photos/7078661/pexels-photo-7078661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 alt='forestOne'
                 />
                 <Carousel.Caption>
-                    <h3 className='caption'>Winter Forest</h3>
+                    <h3 className='caption'>Development</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100 imageCarousel"
-                    src={forestFour}
+                    src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                     alt='forestfour'
                 />
                 <Carousel.Caption>
-                    <h3>Spring Forest</h3>
+                    <h3>Programing</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100 imageCarousel"
-                    src={forestTwo}
-                    alt='forestTwo'
-                />
-                <Carousel.Caption>
-                    <h3>Summer Forest</h3>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100 imageCarousel"
-                    src={forestThree}
+                    src="https://images.pexels.com/photos/67789/pexels-photo-67789.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                     alt='forestthree'
                 />
                 <Carousel.Caption>
-                    <h3>Autumn Forest</h3>
+                    <h3>Network</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

@@ -1,8 +1,7 @@
 import './App.css';
-import {Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header";
-import "./app.scss"
+import "./app.scss";
 
 function App() {
   return (
