@@ -1,6 +1,11 @@
 {
   "blogs": [
     {
+      "id": 1,
+      "title": "Tutorial",
+      "body": "\n\nScope determines the accessibility (visibility) of variables.\n\nJavaScript has 3 types of scope:\n\n    Block scope\n    Function scope\n    Global scope\n\nd."
+    },
+    {
       "id": 2,
       "title": "About JavaScript",
       "body": "JavaScript is the world's most popular programming language.\n\nJavaScript is the programming language of the Web.\n\nJavaScript is easy to learn.\n\nThis tutorial will teach you JavaScript from basic to advanced."
@@ -37,15 +42,9 @@
     },
     {
       "title": "Common Mistakes",
-      "body": "",
+      "body": "Accidentally Using the Assignment Operator\n\nJavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (=), instead of a comparison operator (==) in an if statement. ",
       "id": 9
-    },
-    {
-      "title": "Performance",
-      "body": "How to speed up your JavaScript code.\nReduce Activity in Loops\n\nLoops are often used in programming.\n\nEach statement in a loop, including the for statement, is executed for each iteration of the loop.\n\nStatements or assignments that can be placed outside the loop will make the loop run faster. ",
-      "id": 10
     }
-
   ],
   "members": [
     {

@@ -1,4 +1,3 @@
-import {Button} from "react-bootstrap";
 import React from "react";
 import "./blogDetails.scss"
 import {useParams} from "react-router-dom";
@@ -15,8 +14,8 @@ const BlogDetails = () => {
                 {isLoading && <div>Loading...</div>}
                 {blog && (
                     <article>
-                        <h2>{blog.title}</h2>
-                        <p>{blog.body}</p>
+                        <h2 className="text-info">{blog.title}</h2>
+                        <p className='text-md-start'>{blog.body}</p>
                     </article>
                 )}
             </div>

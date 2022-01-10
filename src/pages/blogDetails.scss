@@ -1,3 +1,12 @@
 .blogDetails {
   padding-top: 10em;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      width: 70%;
+      color:#f8f9fa;
+    }
+  }
 }

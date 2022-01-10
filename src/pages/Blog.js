@@ -113,16 +113,16 @@ function Blog() {
                 </Form>
             </div>
 
-            <div className="blogs">
+            <Col className="colList">
                 {foundPost && foundPost.length > 0 ? (
                     foundPost.map((blog) => {
                         return (
-                            <div className="d-md-flex blogList" key={blog.id}>
+                            <div className="d-md-flex " key={blog.id}>
                                 <img
                                     width={150}
                                     height={150}
                                     className="align-self-start mr-3"
-                                    src="https://images.pexels.com/photos/1095826/pexels-photo-1095826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png"
                                 />
                                 <div className="media-body">
                                     <Nav>
@@ -160,7 +160,7 @@ function Blog() {
                     </Col>}
                     </div>)
                 }
-            </div>
+            </Col>
             <Row>
                         {error && <div>{error}</div>}
             </Row>
