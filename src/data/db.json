@@ -41,9 +41,14 @@
       "id": 8
     },
     {
-      "title": "Common Mistakes",
-      "body": "Accidentally Using the Assignment Operator\n\nJavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (=), instead of a comparison operator (==) in an if statement. ",
+      "title": "Best Practices",
+      "body": "Avoid Global Variables\n\nMinimize the use of global variables.\n\nThis includes all data types, objects, and functions.\n\nGlobal variables and functions can be overwritten by other scripts.\n\nUse local variables instead, and learn how to use closures.\nAlways Declare Local Variables\n\nAll variables used in a function should be declared as local variables.\n\nLocal variables must be declared with the var keyword or the let keyword,or the const keyword, otherwise they will become global variables.",
       "id": 9
+    },
+    {
+      "title": "Best Practices",
+      "body": "Avoid Global Variables\n\nMinimize the use of global variables.\n\nThis includes all data types, objects, and functions.\n\nGlobal variables and functions can be overwritten by other scripts.\n\nUse local variables instead, and learn how to use closures.\nAlways Declare Local Variables\n\nAll variables used in a function should be declared as local variables.\n\nLocal variables must be declared with the var keyword or the let keyword,or the const keyword, otherwise they will become global variables.",
+      "id": 10
     }
   ],
   "members": [

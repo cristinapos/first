@@ -1,14 +1,37 @@
+@import "../components/mixins";
+
 .blogContainer {
   padding-top: 5em;
+
+
   .searchAddContainer {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2rem;
-    .buttonAdd {
-      color:#0dcaf0;
-      font-weight: 400;
-      &:hover {
-        color:#000;
+    margin-bottom: 2rem;
+
+    @include mobile{
+    }
+    .addPost {
+      .buttonAdd {
+        color:#0dcaf0;
+        font-weight: 400;
+
+        @include mobile{
+          height: 2.5em;
+          align-self: flex-start;
+          margin-top: -0.5rem;
+        }
+        @include tablet{
+          height: 2.5em;
+          margin-top: -0.5rem;
+        }
+        &:hover {
+          color:#000;
+        }
+
+        @include mobile{
+
+        }
       }
     }
     .form {
@@ -24,6 +47,14 @@
     .media-body {
       padding-bottom: 5em;
       width: 12em;
+      .aDelete {
+        .buttonDelete{
+          &:hover{
+            background: red;
+            color: red;
+          }
+        }
+      }
     }
   }
 }

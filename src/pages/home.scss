@@ -1,3 +1,5 @@
+@import "../components/mixins";
+
 .homeContainer {
   h2 {
     font-weight: 900;
@@ -8,6 +10,13 @@
     flex-direction: row;
     justify-content: center;
     padding: 0 5em;
+
+    @include mobile {
+      padding: 0;
+    }
+    @include tablet{
+      padding: 0;
+    }
     .cardD {
       margin: 2em;
       display: flex;
@@ -15,9 +24,23 @@
       justify-content: space-between;
       padding: 0 5em;
       border: none;
+
+      @include mobile {
+        margin: 0;
+        padding: 0;
+      }
+
+      @include tablet {
+        margin-right: 0;
+        padding: 0;
+      }
       .divCardOne {
         display: flex;
         flex-direction: row;
+
+        @include mobile {
+          flex-direction: column;
+        }
         .divCard {
           background: #f8f9fa;
           border: 2px rgba(25, 135, 84, 0.8) solid;
@@ -26,6 +49,15 @@
           margin-right: 2em;
           width: 15rem;
           border-radius: 5px;
+          @include mobile {
+            margin-bottom: 2em;
+            margin-right: 0;
+          }
+
+          @include tablet {
+            width: 10rem;
+            height: 18rem;
+          }
           .cardBody {
             padding: 2em 0;
             display: flex;

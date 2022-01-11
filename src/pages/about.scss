@@ -1,30 +1,30 @@
+@import "../components/mixins";
+
 .navCols {
   cursor: pointer;
 }
 .aboutContainer {
   padding-top: 4em;
   .secondCol {
-  .first {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h2 {
-      text-align: center;
-      align-self: center;
+    text-align: justify;
+    @include tablet {
+      padding-left: 2em;
     }
-    img {
-      align-self: center;
 
+    .tabContent {
 
+      .tabPane {
+        h2 {
+          margin-bottom: 1em;
+          @include mobile {
+          }
+        }
+        .tabPaneText {
+          margin-top: 10rem;
+          width: 100%;
+        }
+      }
     }
-    .tabPaneText {
 
-      margin-top: 10rem;
-      width: 57rem;
-    }
-  }
   }
 }
-  h2 {
-    margin-bottom: 1em;
-  }

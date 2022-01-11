@@ -96,7 +96,7 @@ function Blog() {
                         <Nav>
                             <Nav.Link as={Link} to="/blog/addPost">
                                 <Button variant="outline-info" className="buttonAdd btn btn-md">
-                                    Add post
+                                    Add
                                 </Button>
                             </Nav.Link>
                         </Nav>
@@ -131,7 +131,7 @@ function Blog() {
                                         </Nav.Link>
                                     </Nav>
                                     <p>{blog.text}</p>
-                                    <a href={`http://localhost:3001/blogs/${blog.id}`} onClick={handleClick}><Button variant="dark">Delete post</Button></a>
+                                    <a href={`http://localhost:3001/blogs/${blog.id}`} className="aDelete" onClick={handleClick}><Button className="buttonDelete">Delete post</Button></a>
                                 </div>
                             </div>
                         )

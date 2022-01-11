@@ -1,3 +1,5 @@
+@import "../components/mixins";
+
 .containerPost {
   padding-top: 5em;
 
@@ -7,8 +9,26 @@
   .post {
     display: flex;
     justify-content: space-between;
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
     form {
       width: 30em;
+
+      @include mobile{
+        width: 90%;
+        align-self: center;
+        margin-bottom: 2em;
+      }
+      @include tablet {
+        width: 50%;
+        margin-right: 4em;
+      }
+      @include desktop{
+        margin-right: 4em;
+      }
       .label {
         margin: 1em 0;
       }
@@ -24,9 +44,21 @@
 
   }
   .recomandations {
-    width: 50%;
+    width: 40%;
+    text-align: start;
+
+    @include mobile {
+      width: 90%;
+
+    }
+    @include tablet {
+      width: 50%;
+    }
     h3 {
       margin-bottom: 1em;
+      p {
+
+      }
     }
     .lastP {
       padding-top: 2em;

@@ -77,7 +77,7 @@ const AddPost = (props) =>{
                         <Button variant="primary" type="submit" classname="buttonAddPost">Add post</Button>
                     </form>
                     <div className="recomandations">
-                        <h3 className="text-info">Recomandations</h3>
+                        <h3 className="text-info">Recomandations:</h3>
                         <p className='text-md-start'>
                             Please create code fences by placing your code between sets of 3 backticks ` or use CTRL + K.
                             Create inline code spans by placing text between single backticks.

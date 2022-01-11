@@ -1,5 +1,11 @@
-
+@import "mixins";
 
 .imageCarousel {
-  height: 41em;
+  height: 25em;
+  @include desktop {
+    height: 41em;
+  }
+  @include tablet {
+    height: 32em;
+  }
 }
