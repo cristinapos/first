@@ -153,7 +153,7 @@ function Blog() {
                                         </Nav.Link>
                                     </Nav>
                                     <p>{blog.text}</p>
-                                    <a href={`http://localhost:3001/blogs/${blog.id}`} onClick={handleClick}><Button className="mt-1 ms-3" variant="dark">Delete post</Button></a>
+                                    <a href={`http://localhost:3001/blogs/${blog.id}`} onClick={handleClick}><Button className="mt-1 ms-3 buttonDelete" variant="danger">Delete post</Button></a>
                                 </div>
                             </div>
                         ) )}

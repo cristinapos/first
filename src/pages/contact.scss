@@ -5,6 +5,7 @@
 
   .titleContact {
     margin-bottom: 4em;
+    cursor: default;
     h1 {
       font-weight: bold;
     }
@@ -37,9 +38,11 @@
       }
       h3 {
         color: #0dcaf0;
+        cursor: default;
       }
     }
     .message {
+      cursor: default;
       margin-bottom: 9em;
       margin-left: 12em;
       margin-right: 7em;
@@ -50,6 +53,7 @@
         align-items: flex-start;
         margin-bottom: 0;
         margin-right: 0;
+        margin-left: 0;
 
       }
 

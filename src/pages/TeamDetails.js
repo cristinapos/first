@@ -14,10 +14,13 @@ const TeamDetails = () => {
                 {error && <div>{error}</div>}
                 {isLoading && <div>Loading...</div>}
                 {member && (
-                    <article>
+                    <div className="article">
+                    <figure>
                         <h2 className="text-primary">{member.title}</h2>
-                        <p className='text-md-start'>{member.body}</p>
-                    </article>
+                        <img src={member.img} alt="text"/>
+                    </figure>
+                        <p>{member.body}</p>
+                    </div>
                 )}
             </div>
         </>

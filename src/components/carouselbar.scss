@@ -1,5 +1,9 @@
 @import "mixins";
 
+
+h3 {
+  cursor: default;
+}
 .imageCarousel {
   height: 25em;
   @include desktop {

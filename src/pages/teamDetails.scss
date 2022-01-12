@@ -1,15 +1,35 @@
+@import "../components/mixins";
+
 .teamDetails {
-  padding-top: 10em;
+  padding-top: 8em;
+  width: 100%;
 
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 
-  article {
+  .article {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 70%;
+    figure {
+
+      img {
+        height: 110%;
+        width: 80%;
+        border-radius: 15px;
+
+        @include mobile {
+
+        }
+      }
+    }
+
+    p {
+      margin-top: 5em;
+      text-align: justify;
+    }
   }
 }

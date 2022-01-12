@@ -47,14 +47,13 @@
     .media-body {
       padding-bottom: 5em;
       width: 12em;
-      .aDelete {
         .buttonDelete{
           &:hover{
-            background: red;
-            color: red;
+            background: #495057;
+            border-color: #495057 ;
+            color: #7f868c;
           }
         }
-      }
     }
   }
 }

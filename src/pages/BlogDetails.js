@@ -15,7 +15,7 @@ const BlogDetails = () => {
                 {blog && (
                     <article>
                         <h2 className="text-info">{blog.title}</h2>
-                        <p className='text-md-start'>{blog.body}</p>
+                        <p>{blog.body}</p>
                     </article>
                 )}
             </div>
